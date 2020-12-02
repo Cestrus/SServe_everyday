@@ -5,7 +5,6 @@
 
 export const howMuchOneInNumber = (number) => {
 	if (!(Number.isInteger(number) && number >= 0)) return `You input isn't integer or non-negative number!`;
-	let arrOnes = [...number.toString(2)].filter(el => el === '1');
-	return arrOnes.length;
+	return  [...number.toString(2)].reduce((sum, curr) => sum + +curr, 0);
 }
 
