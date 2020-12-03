@@ -1,8 +1,11 @@
 
 export const concat = (str1, str2) => {
-    const str = str1.split('');
-
-    for(let i = 0; i < str2.length; i++){
+    const str = [];
+    
+    for (let i = 0; i < str1.length; i++){
+      str.push(str1[i]);
+    }
+    for (let i = 0; i < str2.length; i++){
       str.push(str2[i]);      
     }
     return str.join('');
@@ -35,11 +38,15 @@ export const  repeat = (string, count) => {
 
 
 export const  substr = (string, start = 0, length = string.length) => {
-  const str = string.split('');
+  const str = [];
   const substr = [];
 
   start = (start < 0) ? string.length - start : start;
   length = (length > string.length - start) ? string.length - start : length;
+  
+  for (let i = 0; i < string.length; i++){
+    str.push(string[i]);
+  }
 
   for (let i = start; i < start + length; i++){
     substr.push(str[i]);
@@ -48,11 +55,15 @@ export const  substr = (string, start = 0, length = string.length) => {
 }
 
 export const  substring = (string, start = 0, end = string.length) => {
-  const str = string.split('');
+  const str = [];
   const substr = [];
 
   start = (start < 0) ? string.length - start : start;
   length = (length > string.length - start) ? string.length - start : length;
+
+  for (let i = 0; i < string.length; i++){
+    str.push(string[i]);
+  }
 
   for (let i = start; i < end; i++){
     substr.push(str[i]);
