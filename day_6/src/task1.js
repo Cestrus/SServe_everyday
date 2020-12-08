@@ -17,11 +17,10 @@ export const countIP = (ipStart, ipFinish) => {
     strBits += num.toString(2);
   }
 
-  
-  console.log(arrBits);
-  console.log(strBits, +strBits.toString(2));
+  // console.log(arrBits);
+  // console.log(strBits, parseInt(strBits, 2));
 
-  return strBits.toString(10)
+  return parseInt(strBits, 2)
 }
 
 
