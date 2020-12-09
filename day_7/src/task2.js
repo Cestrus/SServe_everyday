@@ -7,8 +7,8 @@ export const decodeText = (text) => {
   for (let i = 0, j = 0; i < arrString.length; i++){
     if (i === 0 || i === keys.length + 1){
       keys.length = 0;
+      j = 0;
       keys = extractKeys(arrString[i]);
-      continue;
     } else {
       let arrWords = arrString[i].split(' ');
       decText += (deleteSign(arrWords[keys[j]]) + ' ');
