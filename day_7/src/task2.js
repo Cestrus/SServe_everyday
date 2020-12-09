@@ -1,14 +1,22 @@
 
 export const decodeText = (text) => {
   const arrString = mySplitText(text);
-  const keys = [];
+  let keys = [];
+  let decText = '';
 
-  // TODO
-  for (let i = 0; i < arrString.length; i++){
-    if (i === 0 || i === keys.length )
-    keys = extractKeys(arrString[i]) 
+  // 
+  for (let i = 0, j = 0; i < arrString.length; i++){
+    if (i === 0 || i === keys.length + 1){
+      keys.length = 0;
+      keys = extractKeys(arrString[i]);
+      continue;
+    } else {
+      let arrWords = arrString[i].split(' ');
+      decText += arrWords[keys[j]];
+      j++;
+    }    
   }
-  return arr;
+  return decText;
 }
 
 const mySplitText = (text) => {
@@ -42,14 +50,14 @@ const deleteSign = (arrWords) => {
 
   for (let i = 0; i < arrWords.length; i++){
     let arrLetter = [...arrWords[i]];
-    const word = '';
+    let word = '';
 
     for (let j = 0; j < arrLetter.length; j++){      
       for (let k = 0; k < forbSign.length; k++){
         if (arrLetter[j] !== forbSign[k]) word += arrLetter[j];
       }
     }
-    wordsNotSing.push(word);
+    wordsNotSign.push(word);
   } 
   return wordsNotSign;
 }

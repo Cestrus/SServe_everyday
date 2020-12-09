@@ -11,7 +11,7 @@ const text = 'Yesterday, we bumped into Laura. It had to happen, but you can\'t 
 // console.log('task 1 => ', checkDesk(arrMock_2));
 // console.log('task 1 => ', checkDesk(arrMock_3));
 
-console.log( decodeText( text ));
+console.log( 'task 2 => ', decodeText( text ));
 
 
 
