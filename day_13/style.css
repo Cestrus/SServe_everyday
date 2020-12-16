@@ -1,0 +1,21 @@
+body{
+  font-style: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.container{
+  display: flex;
+  margin: 30px;
+}
+
+.screen{
+  width: 70px;
+  height: 200px;
+  border: 1px solid black;
+  margin-left: 50px;
+  padding: 30px;
+}
+
+.title{
+  margin: 50px;
+}
